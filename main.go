@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
-	fmt.Println("Learn GO");
+	fmt.Println("Learn GO")
 	my_package.PrintMessage("File structure testing")
+	var name string = "Hello"
+	fmt.Println(name)
 }

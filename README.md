@@ -22,4 +22,4 @@ Why?
 * If we have to use different packages in different files, then we have to keep them in different folder. It is because Go follows strict file structure. It means we can use only one package in a folder of different files. 
 Refer my_package folder for above.
 
-*
+* If the first letter of a variable name is capital , then we can access it in other packages. Same is for functions.

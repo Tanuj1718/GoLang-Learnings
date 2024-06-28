@@ -6,4 +6,5 @@ import (
 
 func PrintMessage(message string){
 	fmt.Println((message))
+	
 }
