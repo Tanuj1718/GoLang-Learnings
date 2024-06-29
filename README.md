@@ -29,3 +29,5 @@ Refer my_package folder for above.
 * _ is a blank and used to ignore the return data of a function, because in go whataver we are declaring, we have to use it in our program. In some cases we don't want to use them, then we store them in _.
 
 * slice is a flexible and dynamic data structure. slice <---> vector.
+
+* map is just like hashing which stores key value pairs and it is unordered.
