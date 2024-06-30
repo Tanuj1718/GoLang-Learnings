@@ -31,3 +31,5 @@ Refer my_package folder for above.
 * slice is a flexible and dynamic data structure. slice <---> vector.
 
 * map is just like hashing which stores key value pairs and it is unordered.
+
+* struct: It is a composite data type that groups together variables under a single name.
