@@ -33,3 +33,5 @@ Refer my_package folder for above.
 * map is just like hashing which stores key value pairs and it is unordered.
 
 * struct: It is a composite data type that groups together variables under a single name.
+
+* pointers: they provide a way to work with memory directly which helps in efficient memory management and sharing data between functions
