@@ -35,3 +35,5 @@ Refer my_package folder for above.
 * struct: It is a composite data type that groups together variables under a single name.
 
 * pointers: they provide a way to work with memory directly which helps in efficient memory management and sharing data between functions
+
+* time: 02-01-2006, Monday. Time function in go used this specific format. For formatting time, we use format function.
