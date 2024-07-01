@@ -37,3 +37,5 @@ Refer my_package folder for above.
 * pointers: they provide a way to work with memory directly which helps in efficient memory management and sharing data between functions
 
 * time: 02-01-2006, Monday. Time function in go used this specific format. For formatting time, we use format function.
+
+* File Handling: When you open a file using functions like os.Create(), os.Open(), you are acquiring system resources to interact with that file. Failing to close the file properly through file.Close() can lead to resource leaks and might cause issues like running out of file descriptors.
