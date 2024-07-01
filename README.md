@@ -41,3 +41,7 @@ Refer my_package folder for above.
 * File Handling: When you open a file using functions like os.Create(), os.Open(), you are acquiring system resources to interact with that file. Failing to close the file properly through file.Close() can lead to resource leaks and might cause issues like running out of file descriptors.
 
 * Web Request: Don't forget to close the body with defer keyword after getting the data from any api. Refer web_request folder.
+
+* URL handling: Convert the string url through url.Parse() method, then take the data.
+
+*
