@@ -44,4 +44,4 @@ Refer my_package folder for above.
 
 * URL handling: Convert the string url through url.Parse() method, then take the data.
 
-*
+* CRUD: To get the data from api , we prefer to make structure for the data we want to get through api. Refer CRUD folder.
