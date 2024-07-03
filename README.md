@@ -45,3 +45,5 @@ Refer my_package folder for above.
 * URL handling: Convert the string url through url.Parse() method, then take the data.
 
 * CRUD: To get the data from api , we prefer to make structure for the data we want to get through api. Refer CRUD folder.
+
+* Goroutine: It allow you to run functions concurrently, or in parallel, with other parts of your program. It improves the performance of the program, especially when dealing with tasks that involve I/O operations or other types of blocking operations.
