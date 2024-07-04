@@ -47,3 +47,9 @@ Refer my_package folder for above.
 * CRUD: To get the data from api , we prefer to make structure for the data we want to get through api. Refer CRUD folder.
 
 * Goroutine: It allow you to run functions concurrently, or in parallel, with other parts of your program. It improves the performance of the program, especially when dealing with tasks that involve I/O operations or other types of blocking operations.
+
+* Project: URL SHORTNER
+
+1- We have made a structure/model, means these are the data which are stored in database.
+
+2- Made a database using map data structure, means the short url will be mapped with the data which are defined in model
