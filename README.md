@@ -56,4 +56,4 @@ Refer my_package folder for above.
 
 NOTE: Whenever some data comes from the web, it comes in the form of byte, we have to convert it into string
 
-*****************CHECK PRACTICE FOLDER, YOU WILL SEE SOMETHING INTERESTING*******************************
+***CHECK PRACTICE FOLDER, YOU WILL SEE SOMETHING INTERESTING***
