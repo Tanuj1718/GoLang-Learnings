@@ -53,3 +53,7 @@ Refer my_package folder for above.
 1- We have made a structure/model, means these are the data which are stored in database.
 
 2- Made a database using map data structure, means the short url will be mapped with the data which are defined in model
+
+NOTE: Whenever some data comes from the web, it comes in the form of byte, we have to convert it into string
+
+*****************CHECK PRACTICE FOLDER, YOU WILL SEE SOMETHING INTERESTING*******************************

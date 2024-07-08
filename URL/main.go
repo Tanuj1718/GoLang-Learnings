@@ -13,6 +13,7 @@ func main() {
 		fmt.Println("Can't parse URL: ", err)
 		return
 	}
+	fmt.Println(parsedUrl)
 	fmt.Printf("Type of URL: %T", parsedUrl)
 	fmt.Println("Scheme: ", parsedUrl.Scheme)
 	fmt.Println("Domain Name: ", parsedUrl.Host)
