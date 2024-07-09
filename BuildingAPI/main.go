@@ -6,6 +6,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"math/rand"
 	"net/http"
 	"strconv"
@@ -37,6 +38,40 @@ func (c *Course) IsEmpty() bool {
 
 func main() {
 	fmt.Println("Building API...")
+	r := mux.NewRouter()
+
+	//seeding
+	courses = append(courses, Course{
+		CourseId: "2",
+		CourseName: "Reactjs Bootcamp",
+		CoursePrice: 399,
+		Author: &Author{
+			FullName: "Rekcon",
+			Website: "www.rekcon.com",
+		},
+	})
+
+	courses = append(courses, Course{
+		CourseId: "5",
+		CourseName: "Web3.0 Bootcamp",
+		CoursePrice: 899,
+		Author: &Author{
+			FullName: "Hark",
+			Website: "www.hark.com",
+		},
+	})
+
+//routing
+r.HandleFunc("/", serveHome).Methods("GET")
+r.HandleFunc("/courses", getAllCourses).Methods("GET")
+r.HandleFunc("/course/{id}", GetOneCourse).Methods("GET")
+r.HandleFunc("/course", CreateOneCourse).Methods("POST")
+r.HandleFunc("/course/{id}", UpdateOneCourse).Methods("PUT")
+r.HandleFunc("/course/{id}", deleteOneCourse).Methods("DELETE")
+
+
+	//listen to a port
+	log.Fatal(http.ListenAndServe(":3000", r))
 	
 }
 
@@ -47,7 +82,7 @@ func serveHome(w http.ResponseWriter, r *http.Request){
 	w.Write([]byte("<h1>Welcome to API Building</h1>"))
 }
 
-//one more route
+//one more controller/handler
 func getAllCourses(w http.ResponseWriter, r *http.Request){
 	fmt.Println("Get all Courses...")
 	w.Header().Set("Content-Type", "application/json")
@@ -65,7 +100,7 @@ func GetOneCourse(w http.ResponseWriter, r *http.Request){
 
 	//loop through courses, find matching id that user has sent, return the response
 	for _, course := range courses{
-		if(course.CourseId==params["id"]){
+		if(course.CourseId==params["id"]){  //id is given because in router there is name id given
 			json.NewEncoder(w).Encode(course)
 			return 
 		}
@@ -123,6 +158,22 @@ func UpdateOneCourse(w http.ResponseWriter, r *http.Request){
 			courses = append(courses, newcourse)
 			json.NewEncoder(w).Encode(newcourse)
 			return
+		}
+	}
+}
+
+func deleteOneCourse(w http.ResponseWriter , r *http.Request){
+	fmt.Println("Delete One Course..")
+	w.Header().Set("Content-Type", "application/json")
+
+	params := mux.Vars(r)
+
+	//loop ,find id, remove(index, index+1)
+	for index, course := range courses{
+		if(course.CourseId==params["id"]){
+			courses = append(courses[:index], courses[index+1:]...)
+			json.NewEncoder(w).Encode("Course deleted successfully")
+			break
 		}
 	}
 }
